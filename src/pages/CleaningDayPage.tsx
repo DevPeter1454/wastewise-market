@@ -1,5 +1,6 @@
-import { useState } from "react";
+import { useState, useCallback } from "react";
 import Icon from "../components/shared/Icon";
+import Toast from "../components/shared/Toast";
 import { useCleaningDay } from "../hooks/useCleaningDay";
 
 const GALLERY_IMAGES = [
@@ -30,13 +31,19 @@ export default function CleaningDayPage() {
   const [name, setName] = useState("");
   const [stallNumber, setStallNumber] = useState("");
   const [joined, setJoined] = useState(false);
+  const [toastVisible, setToastVisible] = useState(false);
+  const [toastMessage, setToastMessage] = useState("");
+  const hideToast = useCallback(() => setToastVisible(false), []);
 
   const handleJoin = async () => {
     if (!name.trim() || !stallNumber.trim()) return;
-    await joinCleaningDay(name, stallNumber);
+    const vendorName = name.trim();
+    await joinCleaningDay(vendorName, stallNumber);
     setName("");
     setStallNumber("");
     setJoined(true);
+    setToastMessage(`Welcome aboard, ${vendorName}! See you on cleaning day`);
+    setToastVisible(true);
     setTimeout(() => setJoined(false), 3000);
   };
 
@@ -276,6 +283,13 @@ export default function CleaningDayPage() {
           </section>
         </div>
       </div>
+
+      <Toast
+        message={toastMessage}
+        icon="celebration"
+        visible={toastVisible}
+        onClose={hideToast}
+      />
     </div>
   );
 }

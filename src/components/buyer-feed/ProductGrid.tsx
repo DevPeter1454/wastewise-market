@@ -4,9 +4,11 @@ import type { Listing } from "../../types";
 interface ProductGridProps {
   listings: Listing[];
   loading: boolean;
+  onBid?: (listing: Listing) => void;
+  onBuy?: (listing: Listing) => void;
 }
 
-export default function ProductGrid({ listings, loading }: ProductGridProps) {
+export default function ProductGrid({ listings, loading, onBid, onBuy }: ProductGridProps) {
   if (loading) {
     return (
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
@@ -45,6 +47,8 @@ export default function ProductGrid({ listings, loading }: ProductGridProps) {
           key={listing.id}
           listing={listing}
           featured={index === 0}
+          onBid={onBid}
+          onBuy={onBuy}
         />
       ))}
     </div>

@@ -1,16 +1,34 @@
-import { useState } from "react";
+import { useState, useCallback } from "react";
 import Icon from "../components/shared/Icon";
+import Toast from "../components/shared/Toast";
 import HeroBento from "../components/buyer-feed/HeroBento";
 import ProductGrid from "../components/buyer-feed/ProductGrid";
 import FabSellItem from "../components/buyer-feed/FabSellItem";
 import { useListings } from "../hooks/useListings";
+import type { Listing } from "../types";
 
 const CATEGORIES = ["All", "Vegetables", "Fruits", "Grains", "Dairy"];
 
 export default function BuyerFeedPage() {
   const [activeCategory, setActiveCategory] = useState("All");
   const [searchQuery, setSearchQuery] = useState("");
+  const [toastVisible, setToastVisible] = useState(false);
+  const [toastMessage, setToastMessage] = useState("");
+  const [toastIcon, setToastIcon] = useState("check_circle");
   const { listings, loading } = useListings(activeCategory);
+  const hideToast = useCallback(() => setToastVisible(false), []);
+
+  const handleBid = useCallback((listing: Listing) => {
+    setToastIcon("gavel");
+    setToastMessage(`Bid placed on ${listing.title} at ₦${listing.discountPrice.toLocaleString()}`);
+    setToastVisible(true);
+  }, []);
+
+  const handleBuy = useCallback((listing: Listing) => {
+    setToastIcon("shopping_bag");
+    setToastMessage(`${listing.title} purchased for ₦${listing.discountPrice.toLocaleString()}!`);
+    setToastVisible(true);
+  }, []);
 
   const filteredListings = searchQuery
     ? listings.filter(
@@ -106,10 +124,22 @@ export default function BuyerFeedPage() {
       </div>
 
       {/* Product grid */}
-      <ProductGrid listings={filteredListings} loading={loading} />
+      <ProductGrid
+        listings={filteredListings}
+        loading={loading}
+        onBid={handleBid}
+        onBuy={handleBuy}
+      />
 
       {/* Mobile FAB */}
       <FabSellItem />
+
+      <Toast
+        message={toastMessage}
+        icon={toastIcon}
+        visible={toastVisible}
+        onClose={hideToast}
+      />
     </div>
   );
 }

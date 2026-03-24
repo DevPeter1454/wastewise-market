@@ -4,11 +4,15 @@ import type { Listing } from "../../types";
 interface ProductCardProps {
   listing: Listing;
   featured?: boolean;
+  onBid?: (listing: Listing) => void;
+  onBuy?: (listing: Listing) => void;
 }
 
 export default function ProductCard({
   listing,
   featured = false,
+  onBid,
+  onBuy,
 }: ProductCardProps) {
   return (
     <article className="bg-surface-container-lowest rounded-xl overflow-hidden shadow-[0px_10px_40px_rgba(19,27,46,0.05)] flex flex-col group">
@@ -59,7 +63,10 @@ export default function ProductCard({
 
         {featured ? (
           <div className="flex items-center gap-4 pt-2">
-            <button className="flex-1 bg-gradient-to-br from-primary to-primary-container text-on-primary py-3.5 rounded-full font-headline font-bold text-sm tracking-wide shadow-md active:scale-95 transition-all">
+            <button
+              onClick={() => onBuy?.(listing)}
+              className="flex-1 bg-gradient-to-br from-primary to-primary-container text-on-primary py-3.5 rounded-full font-headline font-bold text-sm tracking-wide shadow-md active:scale-95 transition-all"
+            >
               Buy Now
             </button>
             <button className="p-3.5 bg-secondary-container text-on-secondary-container rounded-full active:scale-95 transition-all">
@@ -67,7 +74,10 @@ export default function ProductCard({
             </button>
           </div>
         ) : (
-          <button className="w-full bg-secondary-container text-on-secondary-container py-3 rounded-full font-bold text-sm hover:bg-primary hover:text-white transition-colors">
+          <button
+            onClick={() => onBid?.(listing)}
+            className="w-full bg-secondary-container text-on-secondary-container py-3 rounded-full font-bold text-sm hover:bg-primary hover:text-white transition-colors"
+          >
             Add to Bid
           </button>
         )}
