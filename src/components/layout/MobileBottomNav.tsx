@@ -4,8 +4,9 @@ import Icon from "../shared/Icon";
 const navItems = [
   { to: "/", icon: "home", label: "Home" },
   { to: "/sell", icon: "add_circle", label: "Sell" },
+  { to: "/recyclables", icon: "recycling", label: "Recycle" },
   { to: "/guide", icon: "delete_sweep", label: "Guide" },
-  { to: "/cleaning", icon: "cleaning_services", label: "Cleaning" },
+  { to: "/cleaning", icon: "cleaning_services", label: "Clean" },
 ];
 
 export default function MobileBottomNav() {

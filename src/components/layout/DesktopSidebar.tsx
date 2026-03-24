@@ -4,6 +4,7 @@ import Icon from "../shared/Icon";
 const navItems = [
   { to: "/", icon: "storefront", label: "Marketplace" },
   { to: "/sell", icon: "add_circle", label: "Sell Item" },
+  { to: "/recyclables", icon: "recycling", label: "Buy Recyclables" },
   { to: "/guide", icon: "delete_outline", label: "Disposal Guide" },
   { to: "/cleaning", icon: "eco", label: "Cleaning Day" },
 ];
