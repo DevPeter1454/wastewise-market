@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import {
   collection,
   query,
-  where,
   orderBy,
   onSnapshot,
 } from "firebase/firestore";
@@ -74,38 +73,22 @@ const SAMPLE_LISTINGS: Listing[] = [
 ];
 
 export function useListings(category?: string) {
-  const [listings, setListings] = useState<Listing[]>([]);
+  const [allListings, setAllListings] = useState<Listing[]>([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     // Check if Firebase is configured
     const projectId = import.meta.env.VITE_FIREBASE_PROJECT_ID;
     if (!projectId) {
-      // Use sample data for demo
-      const filtered =
-        category && category !== "All"
-          ? SAMPLE_LISTINGS.filter((l) => l.category === category)
-          : SAMPLE_LISTINGS;
-      setListings(filtered);
+      setAllListings(SAMPLE_LISTINGS);
       setLoading(false);
       return;
     }
 
     try {
-      let q = query(
-        collection(db, "listings"),
-        where("status", "==", "active"),
-        orderBy("createdAt", "desc")
-      );
-
-      if (category && category !== "All") {
-        q = query(
-          collection(db, "listings"),
-          where("status", "==", "active"),
-          where("category", "==", category),
-          orderBy("createdAt", "desc")
-        );
-      }
+      // Simple query — no composite index needed.
+      // Category filtering is done client-side.
+      const q = query(collection(db, "listings"), orderBy("createdAt", "desc"));
 
       const unsubscribe = onSnapshot(
         q,
@@ -114,19 +97,19 @@ export function useListings(category?: string) {
             id: doc.id,
             ...doc.data(),
           })) as Listing[];
-          setListings(items.length > 0 ? items : SAMPLE_LISTINGS);
+          setAllListings(items.length > 0 ? items : SAMPLE_LISTINGS);
           setLoading(false);
         },
         () => {
           // On error, fall back to sample data
-          setListings(SAMPLE_LISTINGS);
+          setAllListings(SAMPLE_LISTINGS);
           setLoading(false);
         }
       );
 
       // Safety timeout: fall back to sample data if Firestore hasn't responded
       const timeout = setTimeout(() => {
-        setListings((prev) => prev.length > 0 ? prev : SAMPLE_LISTINGS);
+        setAllListings((prev) => prev.length > 0 ? prev : SAMPLE_LISTINGS);
         setLoading(false);
       }, 5000);
 
@@ -135,10 +118,17 @@ export function useListings(category?: string) {
         unsubscribe();
       };
     } catch {
-      setListings(SAMPLE_LISTINGS);
+      setAllListings(SAMPLE_LISTINGS);
       setLoading(false);
     }
-  }, [category]);
+  }, []);
+
+  // Filter by status and category client-side (avoids composite index requirement)
+  const listings = allListings.filter((l) => {
+    if (l.status && l.status !== "active") return false;
+    if (category && category !== "All" && l.category !== category) return false;
+    return true;
+  });
 
   return { listings, loading };
 }

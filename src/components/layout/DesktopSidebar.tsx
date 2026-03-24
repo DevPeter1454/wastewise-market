@@ -60,10 +60,19 @@ export default function DesktopSidebar() {
       </div>
 
       <div className="border-t border-slate-200/50 pt-4">
-        <a className="text-slate-600 mx-2 px-4 py-2 hover:bg-slate-200 rounded-full flex items-center gap-3 text-xs cursor-pointer">
+        <NavLink
+          to="/settings"
+          className={({ isActive }) =>
+            `mx-2 px-4 py-2 rounded-full flex items-center gap-3 text-xs cursor-pointer ${
+              isActive
+                ? "bg-green-100 text-green-800"
+                : "text-slate-600 hover:bg-slate-200"
+            }`
+          }
+        >
           <Icon name="settings" className="text-lg" />
           Settings
-        </a>
+        </NavLink>
         <a className="text-slate-600 mx-2 px-4 py-2 hover:bg-slate-200 rounded-full flex items-center gap-3 text-xs cursor-pointer">
           <Icon name="help" className="text-lg" />
           Help Center

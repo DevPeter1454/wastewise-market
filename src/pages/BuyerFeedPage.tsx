@@ -31,11 +31,14 @@ export default function BuyerFeedPage() {
   }, []);
 
   const filteredListings = searchQuery
-    ? listings.filter(
-        (l) =>
-          l.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-          l.vendorName.toLowerCase().includes(searchQuery.toLowerCase())
-      )
+    ? listings.filter((l) => {
+        const q = searchQuery.toLowerCase();
+        return (
+          l.title.toLowerCase().includes(q) ||
+          l.vendorName.toLowerCase().includes(q) ||
+          l.category.toLowerCase().includes(q)
+        );
+      })
     : listings;
 
   return (

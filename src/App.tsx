@@ -4,6 +4,7 @@ import BuyerFeedPage from "./pages/BuyerFeedPage";
 import VendorListingPage from "./pages/VendorListingPage";
 import DisposalGuidePage from "./pages/DisposalGuidePage";
 import CleaningDayPage from "./pages/CleaningDayPage";
+import SettingsPage from "./pages/SettingsPage";
 
 export default function App() {
   return (
@@ -13,6 +14,7 @@ export default function App() {
         <Route path="/sell" element={<VendorListingPage />} />
         <Route path="/guide" element={<DisposalGuidePage />} />
         <Route path="/cleaning" element={<CleaningDayPage />} />
+        <Route path="/settings" element={<SettingsPage />} />
       </Routes>
     </AppShell>
   );

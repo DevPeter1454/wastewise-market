@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Icon from "../shared/Icon";
 
 export default function MobileTopBar() {
@@ -9,9 +10,9 @@ export default function MobileTopBar() {
           WasteWise Market
         </h1>
       </div>
-      <div className="flex items-center">
+      <Link to="/settings" className="flex items-center">
         <Icon name="account_circle" className="text-slate-500" />
-      </div>
+      </Link>
     </header>
   );
 }
