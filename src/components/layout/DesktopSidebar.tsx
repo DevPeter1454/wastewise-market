@@ -3,7 +3,7 @@ import Icon from "../shared/Icon";
 
 const navItems = [
   { to: "/", icon: "storefront", label: "Marketplace" },
-  { to: "/guide", icon: "delete_outline", label: "Disposal Guide" },
+  { to: "/guide", icon: "delete_outline", label: "AI Disposal Guide" },
   { to: "/sell", icon: "add_circle", label: "Sell Item" },
   { to: "/recyclables", icon: "recycling", label: "Buy Recyclables" },
   { to: "/cleaning", icon: "eco", label: "Cleaning Day" },
