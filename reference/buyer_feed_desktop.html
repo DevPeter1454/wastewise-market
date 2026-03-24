@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "tertiary-fixed-dim": "#eec200",
+              "secondary-fixed": "#dbe4ea",
+              "tertiary-fixed": "#ffe083",
+              "on-surface": "#131b2e",
+              "tertiary-container": "#cea700",
+              "primary-fixed": "#7ffc97",
+              "inverse-on-surface": "#eef0ff",
+              "surface-container-high": "#e2e7ff",
+              "primary": "#006b2c",
+              "outline-variant": "#bdcaba",
+              "on-primary-fixed-variant": "#005320",
+              "on-secondary": "#ffffff",
+              "on-error-container": "#93000a",
+              "on-tertiary-fixed": "#231b00",
+              "on-primary-container": "#f7fff2",
+              "secondary-fixed-dim": "#bfc8ce",
+              "on-primary": "#ffffff",
+              "on-secondary-fixed-variant": "#3f484d",
+              "background": "#faf8ff",
+              "on-tertiary-fixed-variant": "#574500",
+              "on-tertiary": "#ffffff",
+              "tertiary": "#735c00",
+              "on-tertiary-container": "#4e3e00",
+              "error-container": "#ffdad6",
+              "surface-container-low": "#f2f3ff",
+              "primary-fixed-dim": "#62df7d",
+              "surface-dim": "#d2d9f4",
+              "surface-container-highest": "#dae2fd",
+              "secondary-container": "#dbe4ea",
+              "surface-variant": "#dae2fd",
+              "on-secondary-fixed": "#141d21",
+              "surface": "#faf8ff",
+              "on-error": "#ffffff",
+              "surface-container": "#eaedff",
+              "primary-container": "#00873a",
+              "inverse-primary": "#62df7d",
+              "on-background": "#131b2e",
+              "surface-tint": "#006e2d",
+              "outline": "#6e7b6c",
+              "inverse-surface": "#283044",
+              "secondary": "#576065",
+              "surface-bright": "#faf8ff",
+              "surface-container-lowest": "#ffffff",
+              "on-surface-variant": "#3e4a3d",
+              "error": "#ba1a1a",
+              "on-secondary-container": "#5d666b",
+              "on-primary-fixed": "#002109"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .tonal-depth { background-color: #f2f3ff; }
+      body { font-family: 'Inter', sans-serif; }
+      h1, h2, h3, .font-headline { font-family: 'Manrope', sans-serif; }
+    </style>
+</head>
+<body class="bg-background text-on-background antialiased min-h-screen">
+<!-- Side Navigation Bar -->
+<aside class="h-screen w-64 fixed left-0 top-0 border-r-0 bg-slate-50 dark:bg-slate-950 flex flex-col py-6 gap-y-2 font-manrope font-medium text-sm z-[60]">
+<div class="px-6 mb-8 flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-primary-container flex items-center justify-center text-on-primary-container">
+<span class="material-symbols-outlined" data-icon="eco">eco</span>
+</div>
+<div>
+<h1 class="text-xl font-black text-green-800 dark:text-green-400 tracking-tight">EcoFlow Ledger</h1>
+<p class="text-[10px] text-slate-500 uppercase tracking-widest font-bold">Precision Sustainability</p>
+</div>
+</div>
+<nav class="flex-grow space-y-1">
+<a class="text-slate-600 dark:text-slate-400 mx-2 px-4 py-3 hover:bg-slate-200 dark:hover:bg-slate-800 rounded-full flex items-center gap-3 hover:translate-x-1 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+                Dashboard
+            </a>
+<a class="bg-green-100 dark:bg-green-900/40 text-green-800 dark:text-green-100 rounded-full mx-2 px-4 py-3 flex items-center gap-3 hover:translate-x-1 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="gavel" style="font-variation-settings: 'FILL' 1;">gavel</span>
+                Active Bids
+            </a>
+<a class="text-slate-600 dark:text-slate-400 mx-2 px-4 py-3 hover:bg-slate-200 dark:hover:bg-slate-800 rounded-full flex items-center gap-3 hover:translate-x-1 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="favorite">favorite</span>
+                Saved Items
+            </a>
+<a class="text-slate-600 dark:text-slate-400 mx-2 px-4 py-3 hover:bg-slate-200 dark:hover:bg-slate-800 rounded-full flex items-center gap-3 hover:translate-x-1 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="receipt_long">receipt_long</span>
+                Transaction History
+            </a>
+<a class="text-slate-600 dark:text-slate-400 mx-2 px-4 py-3 hover:bg-slate-200 dark:hover:bg-slate-800 rounded-full flex items-center gap-3 hover:translate-x-1 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="eco">eco</span>
+                Carbon Credits
+            </a>
+</nav>
+<div class="px-4 mt-auto mb-6">
+<button class="w-full bg-gradient-to-br from-primary to-primary-container text-white py-3 rounded-full font-bold text-sm shadow-sm active:scale-95 transition-all">
+                Donate Surplus
+            </button>
+</div>
+<div class="border-t border-slate-200/50 pt-4">
+<a class="text-slate-600 dark:text-slate-400 mx-2 px-4 py-2 hover:bg-slate-200 dark:hover:bg-slate-800 rounded-full flex items-center gap-3 text-xs" href="#">
+<span class="material-symbols-outlined text-lg" data-icon="settings">settings</span>
+                Settings
+            </a>
+<a class="text-slate-600 dark:text-slate-400 mx-2 px-4 py-2 hover:bg-slate-200 dark:hover:bg-slate-800 rounded-full flex items-center gap-3 text-xs" href="#">
+<span class="material-symbols-outlined text-lg" data-icon="help">help</span>
+                Help Center
+            </a>
+</div>
+</aside>
+<!-- Top Navigation Bar -->
+<header class="fixed top-0 right-0 left-64 h-16 bg-white/70 dark:bg-slate-900/70 backdrop-blur-md z-50 flex justify-between items-center px-8 shadow-sm dark:shadow-none">
+<div class="flex items-center gap-8">
+<nav class="hidden md:flex items-center gap-6">
+<a class="text-slate-600 dark:text-slate-400 hover:text-green-600 dark:hover:text-green-300 transition-colors font-manrope antialiased" href="#">Marketplace</a>
+<a class="text-green-700 dark:text-green-400 font-bold border-b-2 border-green-700 dark:border-green-400 pb-1 font-manrope antialiased" href="#">Impact Tracker</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-green-600 dark:hover:text-green-300 transition-colors font-manrope antialiased" href="#">Community</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-green-600 dark:hover:text-green-300 transition-colors font-manrope antialiased" href="#">Resources</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<div class="flex items-center gap-2 mr-4">
+<button class="p-2 text-slate-600 hover:bg-green-50 rounded-lg transition-all active:scale-95 duration-200 ease-in-out">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+<button class="p-2 text-slate-600 hover:bg-green-50 rounded-lg transition-all active:scale-95 duration-200 ease-in-out">
+<span class="material-symbols-outlined" data-icon="shopping_cart">shopping_cart</span>
+</button>
+</div>
+<button class="bg-primary text-white px-5 py-2 rounded-full font-bold text-sm active:scale-95 transition-all">
+                List Item
+            </button>
+<img alt="User profile avatar" class="w-10 h-10 rounded-full border-2 border-white shadow-sm object-cover" data-alt="Professional portrait of a West African woman with a warm smile, soft natural lighting, high-end photography style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBYwTBeNgLmDY1FfFKwo8DJLd8IW4puE8KW_kR93eqd4lK3FJBS3wBzxyt3b6Rv3r0hawxV3CgRdmNAIZNOwqMHTiTJ1Ux9rEbk9Aw1_fuGYid4DOVsDwF3YnqZtQd2krPVh6mCIbIqgKtcUEagYBKX8RCXBvU6BffGvy9cyYACPodXNbnWEAtjybXlkcroJm8GNjVU4eL86askgyOutoaaJQqsL_z0C1iYSWqfPXpFQgBoTDzg6yh3DCnV5i16rmJDFlZjmq-YLOA"/>
+</div>
+</header>
+<!-- Main Content Area -->
+<main class="ml-64 pt-24 pb-12 px-8 max-w-[1600px] mx-auto">
+<!-- Header & Search -->
+<div class="mb-10 flex flex-col md:flex-row md:items-end justify-between gap-6">
+<div class="max-w-xl">
+<h2 class="text-4xl font-extrabold text-on-surface tracking-tight mb-2">Marketplace Feed</h2>
+<p class="text-on-surface-variant leading-relaxed">Discover surplus fresh produce from local Nigerian farms and help reduce food waste today.</p>
+</div>
+<div class="relative w-full md:w-[400px]">
+<input class="w-full bg-surface-container-highest border-none rounded-md py-4 pl-12 pr-4 focus:ring-2 focus:ring-primary/20 focus:bg-surface-container-lowest transition-all" placeholder="Search tomatoes, peppers, yams..." type="text"/>
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-on-surface-variant" data-icon="search">search</span>
+</div>
+</div>
+<!-- Bento Layout Highlights -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+<!-- Impact Summary Card -->
+<div class="md:col-span-2 bg-gradient-to-br from-primary to-primary-container p-8 rounded-xl text-white flex flex-col justify-between relative overflow-hidden shadow-sm">
+<div class="relative z-10">
+<div class="inline-flex items-center gap-2 bg-white/20 backdrop-blur-md px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider mb-6">
+<span class="material-symbols-outlined text-sm" data-icon="bolt" style="font-variation-settings: 'FILL' 1;">bolt</span>
+                        Live Impact Stats
+                    </div>
+<h3 class="text-5xl font-black mb-2">240 Kilograms</h3>
+<p class="text-primary-fixed font-medium text-lg">Waste Saved Today in Lagos Region</p>
+</div>
+<div class="mt-8 relative z-10 flex items-center gap-4">
+<div class="h-3 flex-grow bg-white/20 rounded-full overflow-hidden">
+<div class="h-full bg-primary-fixed w-3/4"></div>
+</div>
+<span class="font-bold text-sm">75% of Daily Goal</span>
+</div>
+<!-- Decorative element -->
+<span class="material-symbols-outlined absolute -right-8 -bottom-8 text-[180px] opacity-10 rotate-12" data-icon="eco">eco</span>
+</div>
+<!-- Featured Category Card -->
+<div class="bg-tertiary-fixed p-8 rounded-xl flex flex-col justify-between shadow-sm group">
+<div>
+<h4 class="text-on-tertiary-fixed text-2xl font-bold mb-2">Direct From Plateau</h4>
+<p class="text-on-tertiary-fixed-variant text-sm">The freshest Irish Potatoes and Bell Peppers just arrived at 40% discount.</p>
+</div>
+<button class="mt-6 flex items-center gap-2 text-on-tertiary-fixed font-bold text-sm group-hover:translate-x-2 transition-transform">
+                    Browse Region
+                    <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Product Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+<!-- Product Card 1 -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow group">
+<div class="relative h-56 overflow-hidden">
+<img alt="Fresh red tomatoes" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Close up of bright red, ripe tomatoes in a woven traditional Nigerian basket, outdoor sunlight, vibrant colors" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC4JPD0S6_wfn9Cy-K5L9ZG3YVQVMIHv2HNQ-XtoVnNUHfKWMzMxcvjfS4rAnapx1FJqh3N-uBAoLMbCsFSOQXxBm82B0ILcR4kK6ddtMY7ZWP-l9p2fyc4LsIQ0bsh2r4jlSF8IC8RbJTfYdzoGCwByBI1FgoA9TZUqZC2kwAPJnfMhYvQw9w8PXhylThI1uF0qjKQrS-Xzktd-trbt8B0U5IwHKIAv15Y0ENTxU5vPgm1HuJHKNtDz_oqYtSH9newOwkywFH11Ys"/>
+<div class="absolute top-4 right-4 bg-tertiary-fixed text-on-tertiary-fixed px-3 py-1 rounded-full text-xs font-bold flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-sm" data-icon="eco" style="font-variation-settings: 'FILL' 1;">eco</span>
+                        -35% OFF
+                    </div>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-2">
+<h5 class="text-lg font-bold text-on-surface">Hausa Tomatoes (Crate)</h5>
+<button class="text-slate-300 hover:text-error transition-colors">
+<span class="material-symbols-outlined" data-icon="favorite">favorite</span>
+</button>
+</div>
+<p class="text-sm text-on-surface-variant mb-4 flex items-center gap-1">
+<span class="material-symbols-outlined text-sm" data-icon="store">store</span>
+                        Ibrahim &amp; Sons Farm
+                    </p>
+<div class="flex items-center gap-3">
+<span class="text-xl font-black text-primary">₦12,500</span>
+<span class="text-sm text-slate-400 line-through">₦18,000</span>
+</div>
+<button class="w-full mt-6 bg-secondary-container text-on-secondary-container py-3 rounded-full font-bold text-sm hover:bg-primary hover:text-white transition-colors">
+                        Add to Bid
+                    </button>
+</div>
+</div>
+<!-- Product Card 2 -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow group">
+<div class="relative h-56 overflow-hidden">
+<img alt="Organic carrots and peppers" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Assorted fresh carrots and bell peppers spread on a wooden rustic table in a local Nigerian market, warm morning light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAOJAdVb23nt0jjf4HKeRm0HpN5sjQ-SJ5hjXKNv8XPm6dI9JPAQwWEb5jgtA2BpdRsVAKDPrnEd2_jTVVOkGrqUZD0_OKx3yNcCrI7AFuDq4WX0euZQiC64yPVnfJasPvrziFk3Ddo_DjoOk2oiY8qCn63zk0TqSIK9J6pTkVRQAMPuuHisKWElu2LWUqil9WFRuis7ZHZIksBTQ_joxIk0jan-8DS8CknMS2XCNtAbD9jz6-dYwV2dfN-5y_mhC-v4e1bTQS1Xos"/>
+<div class="absolute top-4 right-4 bg-tertiary-fixed text-on-tertiary-fixed px-3 py-1 rounded-full text-xs font-bold flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-sm" data-icon="eco" style="font-variation-settings: 'FILL' 1;">eco</span>
+                        -20% OFF
+                    </div>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-2">
+<h5 class="text-lg font-bold text-on-surface">Hybrid Bell Peppers</h5>
+<button class="text-slate-300 hover:text-error transition-colors">
+<span class="material-symbols-outlined" data-icon="favorite">favorite</span>
+</button>
+</div>
+<p class="text-sm text-on-surface-variant mb-4 flex items-center gap-1">
+<span class="material-symbols-outlined text-sm" data-icon="store">store</span>
+                        Jos Valley Growers
+                    </p>
+<div class="flex items-center gap-3">
+<span class="text-xl font-black text-primary">₦4,200</span>
+<span class="text-sm text-slate-400 line-through">₦5,250</span>
+</div>
+<button class="w-full mt-6 bg-secondary-container text-on-secondary-container py-3 rounded-full font-bold text-sm hover:bg-primary hover:text-white transition-colors">
+                        Add to Bid
+                    </button>
+</div>
+</div>
+<!-- Product Card 3 -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow group">
+<div class="relative h-56 overflow-hidden">
+<img alt="Nigerian Yams" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Large tubers of fresh Nigerian yams stacked neatly in a sunlit open-air market stall, earthy tones and textures" src="https://lh3.googleusercontent.com/aida-public/AB6AXuArp4aAOlWYsd8LQX14XG125A1JVcufHsvsN3D5ONvb3UqzwHaHANjpzw-e6uYl1a3h4naBbd7ELF26Kk734cwNHVjF6T2iKPJEyXErfG51Z2XaRdO7UrLnuNGMh_Z8uySt5U9ELZe5wk63DJzehMPKjRl6QzYFqxXJgnnEShVwm9ECZH4S0HG-LvLlO_WUN3hzVhVLrfRrwj0P9_1yeLmQIyDXk55f0Z_5z4Bi3UsWeG66EXFHFUfarD_86-5UTGBPFBLEZMy6C7U"/>
+<div class="absolute top-4 right-4 bg-tertiary-fixed text-on-tertiary-fixed px-3 py-1 rounded-full text-xs font-bold flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-sm" data-icon="eco" style="font-variation-settings: 'FILL' 1;">eco</span>
+                        -15% OFF
+                    </div>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-2">
+<h5 class="text-lg font-bold text-on-surface">Abuja Yam Tubers (5pcs)</h5>
+<button class="text-slate-300 hover:text-error transition-colors">
+<span class="material-symbols-outlined" data-icon="favorite">favorite</span>
+</button>
+</div>
+<p class="text-sm text-on-surface-variant mb-4 flex items-center gap-1">
+<span class="material-symbols-outlined text-sm" data-icon="store">store</span>
+                        Green Earth Collective
+                    </p>
+<div class="flex items-center gap-3">
+<span class="text-xl font-black text-primary">₦8,500</span>
+<span class="text-sm text-slate-400 line-through">₦10,000</span>
+</div>
+<button class="w-full mt-6 bg-secondary-container text-on-secondary-container py-3 rounded-full font-bold text-sm hover:bg-primary hover:text-white transition-colors">
+                        Add to Bid
+                    </button>
+</div>
+</div>
+<!-- Product Card 4 -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow group">
+<div class="relative h-56 overflow-hidden">
+<img alt="Onions in sacks" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Bulbs of purple and white onions loosely packed in traditional burlap sacks, warm earthy marketplace background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBU9R4S0QEHimY0Sh36ycQ8Na2FkhLFfXesnQ5_uZC5av4zruzzFfVQQ6tJX6YhcmRpdmhBcrKzBkwNgV5xVyp4qW7AfuP7WEGIvwmzaCaeJ5tHbcReyLFd5ShGcWk2cbabDhKr-Mgwn0o_866YxVmnvjIsTMZosycXEA3Xh9rWOGltxX06tJdUfMxEq6kd3eLeXIAg6KwoCE2D623DOIppyiGdZzltY5s9i47LcNwE5P8-EKRdUDIcvEaEVSoWPh8t7CTvRS-2du0"/>
+<div class="absolute top-4 right-4 bg-tertiary-fixed text-on-tertiary-fixed px-3 py-1 rounded-full text-xs font-bold flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-sm" data-icon="eco" style="font-variation-settings: 'FILL' 1;">eco</span>
+                        -50% OFF
+                    </div>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-2">
+<h5 class="text-lg font-bold text-on-surface">Red Onions (Half Bag)</h5>
+<button class="text-slate-300 hover:text-error transition-colors">
+<span class="material-symbols-outlined" data-icon="favorite">favorite</span>
+</button>
+</div>
+<p class="text-sm text-on-surface-variant mb-4 flex items-center gap-1">
+<span class="material-symbols-outlined text-sm" data-icon="store">store</span>
+                        Zaria Market Hub
+                    </p>
+<div class="flex items-center gap-3">
+<span class="text-xl font-black text-primary">₦22,000</span>
+<span class="text-sm text-slate-400 line-through">₦44,000</span>
+</div>
+<button class="w-full mt-6 bg-secondary-container text-on-secondary-container py-3 rounded-full font-bold text-sm hover:bg-primary hover:text-white transition-colors">
+                        Add to Bid
+                    </button>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="ml-64 bg-slate-50 dark:bg-slate-950 py-12 px-8 border-t-0 bg-slate-200/30 dark:bg-slate-800/30">
+<div class="max-w-[1600px] mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-4 w-full">
+<div class="text-slate-500 dark:text-slate-500 font-inter text-xs uppercase tracking-widest">
+                © 2024 EcoFlow Ledger. Circulating value, reducing waste.
+            </div>
+<div class="flex flex-wrap md:justify-end gap-6">
+<a class="text-slate-500 dark:text-slate-500 hover:text-green-600 font-inter text-xs uppercase tracking-widest hover:opacity-80 transition-opacity" href="#">Privacy Policy</a>
+<a class="text-slate-500 dark:text-slate-500 hover:text-green-600 font-inter text-xs uppercase tracking-widest hover:opacity-80 transition-opacity" href="#">Terms of Service</a>
+<a class="text-slate-500 dark:text-slate-500 hover:text-green-600 font-inter text-xs uppercase tracking-widest hover:opacity-80 transition-opacity" href="#">Vendor Portal</a>
+<a class="text-slate-500 dark:text-slate-500 hover:text-green-600 font-inter text-xs uppercase tracking-widest hover:opacity-80 transition-opacity" href="#">Sustainability Report</a>
+</div>
+</div>
+</footer>
+</body></html>

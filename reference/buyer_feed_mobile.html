@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>WasteWise Market | Buyer Feed</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "tertiary-fixed": "#ffe083",
+              "on-primary-container": "#f7fff2",
+              "secondary-fixed-dim": "#bfc8ce",
+              "background": "#faf8ff",
+              "surface": "#faf8ff",
+              "on-secondary-fixed": "#141d21",
+              "surface-tint": "#006e2d",
+              "on-primary": "#ffffff",
+              "primary": "#006b2c",
+              "on-secondary-fixed-variant": "#3f484d",
+              "primary-fixed-dim": "#62df7d",
+              "on-primary-fixed-variant": "#005320",
+              "error": "#ba1a1a",
+              "tertiary": "#735c00",
+              "on-error": "#ffffff",
+              "secondary-fixed": "#dbe4ea",
+              "surface-container-highest": "#dae2fd",
+              "on-background": "#131b2e",
+              "on-tertiary-container": "#4e3e00",
+              "on-tertiary-fixed-variant": "#574500",
+              "tertiary-container": "#cea700",
+              "on-secondary": "#ffffff",
+              "surface-container": "#eaedff",
+              "on-surface": "#131b2e",
+              "on-surface-variant": "#3e4a3d",
+              "inverse-on-surface": "#eef0ff",
+              "surface-variant": "#dae2fd",
+              "on-tertiary": "#ffffff",
+              "surface-container-high": "#e2e7ff",
+              "error-container": "#ffdad6",
+              "on-tertiary-fixed": "#231b00",
+              "surface-container-lowest": "#ffffff",
+              "secondary-container": "#dbe4ea",
+              "secondary": "#576065",
+              "on-primary-fixed": "#002109",
+              "primary-fixed": "#7ffc97",
+              "primary-container": "#00873a",
+              "surface-bright": "#faf8ff",
+              "on-error-container": "#93000a",
+              "inverse-primary": "#62df7d",
+              "surface-container-low": "#f2f3ff",
+              "on-secondary-container": "#5d666b",
+              "outline": "#6e7b6c",
+              "inverse-surface": "#283044",
+              "outline-variant": "#bdcaba",
+              "tertiary-fixed-dim": "#eec200",
+              "surface-dim": "#d2d9f4"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .no-scrollbar::-webkit-scrollbar { display: none; }
+      .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface font-body text-on-surface min-h-screen pb-24">
+<!-- Top AppBar (JSON Derived) -->
+<header class="fixed top-0 w-full z-50 bg-white/70 dark:bg-slate-900/70 backdrop-blur-md shadow-sm shadow-black/5 flex items-center justify-between px-6 h-16 w-full">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-green-700 dark:text-green-500" data-icon="eco">eco</span>
+<h1 class="font-manrope font-extrabold text-lg tracking-tighter text-green-700 dark:text-green-400">WasteWise Market</h1>
+</div>
+<div class="active:scale-95 duration-150 p-2 rounded-full hover:bg-green-50">
+<span class="material-symbols-outlined text-slate-500 dark:text-slate-400" data-icon="account_circle">account_circle</span>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="pt-20 px-4 max-w-2xl mx-auto space-y-6">
+<!-- Search Section -->
+<section class="mt-4">
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-4 text-outline" data-icon="search">search</span>
+<input class="w-full pl-12 pr-4 py-4 bg-surface-container-highest border-none rounded-lg text-body-lg focus:ring-2 focus:ring-primary/20 focus:bg-surface-container-lowest transition-all" placeholder="Search tomatoes, peppers..." type="text"/>
+</div>
+</section>
+<!-- Filter Chips (Horizontal Scroll) -->
+<nav class="flex overflow-x-auto no-scrollbar gap-3 -mx-4 px-4 py-2">
+<button class="bg-primary text-on-primary px-6 py-2.5 rounded-full font-label font-semibold text-sm whitespace-nowrap active:scale-95 transition-transform">All</button>
+<button class="bg-surface-container-low text-on-surface-variant px-6 py-2.5 rounded-full font-label font-semibold text-sm whitespace-nowrap active:scale-95 transition-transform">Vegetables</button>
+<button class="bg-surface-container-low text-on-surface-variant px-6 py-2.5 rounded-full font-label font-semibold text-sm whitespace-nowrap active:scale-95 transition-transform">Fruits</button>
+<button class="bg-surface-container-low text-on-surface-variant px-6 py-2.5 rounded-full font-label font-semibold text-sm whitespace-nowrap active:scale-95 transition-transform">Grains</button>
+</nav>
+<!-- Product Feed (Bento Style Cards) -->
+<div class="grid grid-cols-1 gap-6">
+<!-- Primary Highlight Card: Big Basket of Tomatoes -->
+<article class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-[0px_10px_40px_rgba(19,27,46,0.05)] flex flex-col group">
+<div class="relative h-56 overflow-hidden">
+<img alt="Fresh red tomatoes in a traditional Nigerian basket" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Close-up of a large woven basket overflowing with bright red, ripe organic tomatoes in a vibrant outdoor African market setting with soft natural sunlight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCvEeLXhRYAWaVcaWRnuzMRNz8sDT-iSF496zFoJyt8hKdHUk1mpPsQUEOa-vmzeuIF1UWYqnoie8b0u5xJRa2afEO0g6qXOrkqVig9bhM2fIeMOURQOYFTvNZamZcn-uLo5Z2-6aSmNo-trCm_H4b7wL1vAkOybYoykKXzg_lZoXMVLQ6sYV4Dj0Pcf5shGPecDAltHK_feh_ZrTgNSfj6UF4Mne7nBRbMjDGDPLpAfPlOW53M_jnLoC-QFNJfl97HBKydNhpTArw"/>
+<div class="absolute top-4 left-4">
+<span class="bg-tertiary-fixed text-on-tertiary-fixed px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider shadow-sm">40% OFF</span>
+</div>
+</div>
+<div class="p-6 space-y-4">
+<div class="flex justify-between items-start">
+<div>
+<h2 class="font-headline font-bold text-xl text-on-surface tracking-tight">Big Basket of Tomatoes</h2>
+<p class="text-on-surface-variant text-sm flex items-center gap-1 mt-1">
+<span class="material-symbols-outlined text-sm" data-icon="storefront">storefront</span>
+                                Sold by Mama Bose
+                            </p>
+</div>
+<div class="text-right">
+<p class="text-primary font-bold text-2xl tracking-tighter">₦5,000</p>
+<p class="text-outline text-sm line-through decoration-error/40">₦8,500</p>
+</div>
+</div>
+<div class="flex items-center gap-4 pt-2">
+<button class="flex-1 bg-gradient-to-br from-primary to-primary-container text-on-primary py-3.5 rounded-full font-headline font-bold text-sm tracking-wide shadow-md active:scale-95 transition-all">
+                            Buy Now
+                        </button>
+<button class="p-3.5 bg-secondary-container text-on-secondary-container rounded-full active:scale-95 transition-all">
+<span class="material-symbols-outlined" data-icon="favorite">favorite</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Secondary Card: Green Bell Peppers -->
+<article class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-[0px_10px_40px_rgba(19,27,46,0.05)] flex flex-col group">
+<div class="relative h-48 overflow-hidden">
+<img alt="Fresh green bell peppers" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A heap of glossy, deep green bell peppers with water droplets on them, arranged on a dark rustic surface with dramatic side lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAFR0KiXsPiNhvb1w9MsDxZZ_dHYKiAch0dfTh0Ee3FBMIHBvzgMHpNA6Y_uwdFF01GSDRpF_O14T8kbu_WS4HUt2B2grm11Gxp9y9spBRMkyZq2JSlV_GsLRwnbxFNZ3UnaG8p7m7wGkURg-UELI9t77iP8ZAOkSocg496sQwro21VRCZJulqgUs7QWzJMD2z1NmcEnrPoKtXKsqm7b6MBy0t3rLcr6LnCShfkByFL-2NztVoKmCHksgFWw2rgJraBi5Fm68Di4Ms"/>
+<div class="absolute top-4 right-4 bg-white/90 backdrop-blur px-3 py-1.5 rounded-lg flex items-center gap-1">
+<span class="material-symbols-outlined text-primary text-xs" data-icon="eco" style="font-variation-settings: 'FILL' 1;">eco</span>
+<span class="text-[10px] font-bold text-on-surface">CO2 SAVED: 1.2kg</span>
+</div>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-end">
+<div class="space-y-1">
+<h3 class="font-headline font-bold text-lg text-on-surface tracking-tight">Large Bag of Peppers</h3>
+<p class="text-on-surface-variant text-sm">Farmer Segun's Fresh Pick</p>
+<div class="pt-2">
+<span class="text-primary font-bold text-xl">₦3,200</span>
+<span class="text-outline text-xs line-through ml-2">₦4,500</span>
+</div>
+</div>
+<button class="bg-primary text-on-primary p-3 rounded-full shadow-lg active:scale-90 transition-transform">
+<span class="material-symbols-outlined" data-icon="add_shopping_cart">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Impact Stat Card -->
+<div class="bg-primary-container/10 border-2 border-dashed border-primary-container/30 rounded-xl p-6 flex items-center gap-4">
+<div class="bg-primary text-on-primary h-14 w-14 rounded-full flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-3xl" data-icon="recycling">recycling</span>
+</div>
+<div>
+<h4 class="font-headline font-bold text-on-surface-variant">Waste Saved Today</h4>
+<p class="text-2xl font-extrabold text-primary tracking-tighter">240 Kilograms</p>
+<div class="w-full bg-primary-fixed h-1.5 rounded-full mt-2">
+<div class="bg-primary h-full rounded-full w-[75%]"></div>
+</div>
+</div>
+</div>
+<!-- Tertiary Card: Yam Tubers -->
+<article class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-[0px_10px_40px_rgba(19,27,46,0.05)] flex flex-col group">
+<div class="relative h-48 overflow-hidden">
+<img alt="Fresh Yam Tubers" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A stack of large, earthy brown yam tubers tied with twine, placed on a burlap sack in a bright airy studio setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBSmgkx7aEy8B-AsMfxb8sSd4FvJwLbeYPgkH5HquZmdgLdzW0e3QgieHh5lMkqagV0nBDc0IuUXyYP2Lri8UWyKV3tu6skgeTWSs86tCCNhEpFAcl_mNNMwPbWcD8TnsWQgHw8mi0w8-t3j6kzqYz3fZcSNnO-QncAP-DQa5EcwAPIfezGYMXA30qcDlzCWhYX9v2p7kCS-ZmOCbwCMVtmM-aM26jpR51myZKajMievVYXThZP8PKGimiZSL81NSOl2F4UPOBh5Vo"/>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-end">
+<div class="space-y-1">
+<h3 class="font-headline font-bold text-lg text-on-surface tracking-tight">Medium Yam Tubers (3pcs)</h3>
+<p class="text-on-surface-variant text-sm">Direct from Abuja Farms</p>
+<div class="pt-2">
+<span class="text-primary font-bold text-xl">₦8,000</span>
+<span class="text-outline text-xs line-through ml-2">₦12,000</span>
+</div>
+</div>
+<button class="bg-primary text-on-primary p-3 rounded-full shadow-lg active:scale-90 transition-transform">
+<span class="material-symbols-outlined" data-icon="add_shopping_cart">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</article>
+</div>
+</main>
+<!-- Contextual FAB (Mandatory Styling) -->
+<button class="fixed bottom-24 right-6 bg-tertiary-container text-on-tertiary-container flex items-center gap-2 pl-4 pr-6 py-4 rounded-full shadow-2xl active:scale-90 transition-transform z-50">
+<span class="material-symbols-outlined" data-icon="add_circle">add_circle</span>
+<span class="font-headline font-bold text-sm">Sell Item</span>
+</button>
+<!-- Bottom Navigation Bar (JSON Derived & Active State Mapped) -->
+<nav class="fixed bottom-0 left-0 w-full h-20 flex justify-around items-center px-4 pb-4 bg-white/70 dark:bg-slate-900/70 backdrop-blur-md rounded-t-[3rem] z-50 shadow-[0px_-10px_40px_rgba(19,27,46,0.05)]">
+<!-- Active: Home -->
+<a class="flex flex-col items-center justify-center bg-green-100 dark:bg-green-900/40 text-green-800 dark:text-green-100 rounded-full px-5 py-2 active:scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined" data-icon="home" style="font-variation-settings: 'FILL' 1;">home</span>
+<span class="font-inter text-[10px] font-semibold uppercase tracking-widest mt-1">Home</span>
+</a>
+<!-- Inactive: Sell -->
+<a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 px-5 py-2 hover:text-green-600 active:scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined" data-icon="add_circle">add_circle</span>
+<span class="font-inter text-[10px] font-semibold uppercase tracking-widest mt-1">Sell</span>
+</a>
+<!-- Inactive: Guide -->
+<a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 px-5 py-2 hover:text-green-600 active:scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined" data-icon="delete_sweep">delete_sweep</span>
+<span class="font-inter text-[10px] font-semibold uppercase tracking-widest mt-1">Guide</span>
+</a>
+<!-- Inactive: Cleaning -->
+<a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 px-5 py-2 hover:text-green-600 active:scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined" data-icon="cleaning_services">cleaning_services</span>
+<span class="font-inter text-[10px] font-semibold uppercase tracking-widest mt-1">Cleaning</span>
+</a>
+</nav>
+</body></html>

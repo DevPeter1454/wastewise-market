@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>WasteWise Market - Cleaning Day</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "tertiary-fixed": "#ffe083",
+              "on-primary-container": "#f7fff2",
+              "secondary-fixed-dim": "#bfc8ce",
+              "background": "#faf8ff",
+              "surface": "#faf8ff",
+              "on-secondary-fixed": "#141d21",
+              "surface-tint": "#006e2d",
+              "on-primary": "#ffffff",
+              "primary": "#006b2c",
+              "on-secondary-fixed-variant": "#3f484d",
+              "primary-fixed-dim": "#62df7d",
+              "on-primary-fixed-variant": "#005320",
+              "error": "#ba1a1a",
+              "tertiary": "#735c00",
+              "on-error": "#ffffff",
+              "secondary-fixed": "#dbe4ea",
+              "surface-container-highest": "#dae2fd",
+              "on-background": "#131b2e",
+              "on-tertiary-container": "#4e3e00",
+              "on-tertiary-fixed-variant": "#574500",
+              "tertiary-container": "#cea700",
+              "on-secondary": "#ffffff",
+              "surface-container": "#eaedff",
+              "on-surface": "#131b2e",
+              "on-surface-variant": "#3e4a3d",
+              "inverse-on-surface": "#eef0ff",
+              "surface-variant": "#dae2fd",
+              "on-tertiary": "#ffffff",
+              "surface-container-high": "#e2e7ff",
+              "error-container": "#ffdad6",
+              "on-tertiary-fixed": "#231b00",
+              "surface-container-lowest": "#ffffff",
+              "secondary-container": "#dbe4ea",
+              "secondary": "#576065",
+              "on-primary-fixed": "#002109",
+              "primary-fixed": "#7ffc97",
+              "primary-container": "#00873a",
+              "surface-bright": "#faf8ff",
+              "on-error-container": "#93000a",
+              "inverse-primary": "#62df7d",
+              "surface-container-low": "#f2f3ff",
+              "on-secondary-container": "#5d666b",
+              "outline": "#6e7b6c",
+              "inverse-surface": "#283044",
+              "outline-variant": "#bdcaba",
+              "tertiary-fixed-dim": "#eec200",
+              "surface-dim": "#d2d9f4"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .tonal-depth { background: linear-gradient(180deg, rgba(250,248,255,0) 0%, rgba(242,243,255,1) 100%); }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface font-body text-on-surface min-h-screen pb-24">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-white/70 backdrop-blur-md shadow-sm shadow-black/5 flex items-center justify-between px-6 h-16 w-full">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-green-700" data-icon="eco">eco</span>
+<h1 class="font-headline font-bold text-lg tracking-tight text-green-700">WasteWise Market</h1>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-slate-500" data-icon="account_circle">account_circle</span>
+</div>
+</header>
+<main class="pt-20 px-4 max-w-md mx-auto space-y-8">
+<!-- Hero Header Section -->
+<section class="mt-4 space-y-2">
+<h2 class="font-headline text-4xl font-extrabold tracking-tight text-on-surface">Cleaning Day</h2>
+<p class="text-on-surface-variant font-medium">Join our community effort to keep the market sustainable and pristine for everyone.</p>
+</section>
+<!-- Main Info Card (Intentional Asymmetry) -->
+<div class="relative overflow-hidden bg-surface-container-lowest rounded-xl p-6 shadow-[0px_10px_40px_rgba(19,27,46,0.04)]">
+<!-- Decorative Background Element -->
+<div class="absolute -top-12 -right-12 w-32 h-32 bg-primary-fixed/20 rounded-full blur-3xl"></div>
+<div class="relative z-10 space-y-6">
+<div class="flex items-start justify-between">
+<div class="space-y-1">
+<span class="text-xs font-bold uppercase tracking-widest text-primary font-label">Next Event</span>
+<h3 class="font-headline text-2xl font-bold">Saturday, Oct 12th</h3>
+</div>
+<div class="bg-primary/10 p-3 rounded-lg">
+<span class="material-symbols-outlined text-primary" data-icon="calendar_today">calendar_today</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="bg-surface-container-low p-4 rounded-lg">
+<span class="material-symbols-outlined text-primary text-sm mb-1" data-icon="schedule">schedule</span>
+<p class="text-xs text-on-surface-variant font-semibold uppercase tracking-tighter">Time</p>
+<p class="font-headline font-bold text-on-surface">7:00 AM</p>
+</div>
+<div class="bg-surface-container-low p-4 rounded-lg">
+<span class="material-symbols-outlined text-primary text-sm mb-1" data-icon="location_on">location_on</span>
+<p class="text-xs text-on-surface-variant font-semibold uppercase tracking-tighter">Location</p>
+<p class="font-headline font-bold text-on-surface">Main Gate</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Social Proof Progress -->
+<div class="bg-surface-container p-6 rounded-xl space-y-4">
+<div class="flex items-center justify-between">
+<p class="font-bold text-sm text-on-surface-variant">45 vendors have joined so far!</p>
+<div class="flex -space-x-2">
+<div class="w-8 h-8 rounded-full border-2 border-surface-container bg-slate-200 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="portrait of a smiling middle-aged man with short hair and a friendly expression" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBSkTVqbxwtIDLFiJjGiNfD-xgpofxUzyZS7xbdYgB974bmR7AhdQ0FytcOzkhV3TQJxUyX82oSiu0USb5SsXNtcBNF8pYhE4mWGmRpErk0nqCDp-JUGnAscXmaDkaVN9pQQio5rdtixBydADcD30_cbdF473G2CcIHACDsJw0VN1wcAJG0T0aJ09JQS3v6uyqbRlvuhX4mhKIaLCL5mV8g10d0kMie0_mAS-2U5-dgu__c5lp5LbiCMKrkD5c_Xl-azKqG-LaXWyw"/>
+</div>
+<div class="w-8 h-8 rounded-full border-2 border-surface-container bg-slate-200 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="close-up portrait of a young woman with a warm smile and professional demeanor" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAnyLZ7wfzREAHgBmrLggGZs7MVqUTLFXqTmeQZOrNf1OwpmvidOSVzjMwF5RnlUyMMTqI6JA82iu45krj8SkgceCuS75Jz5zLHYkCXRL210XNpkFtjPiabVk_jjjiPhvRi9hVeAULU2eseEeG2a0eUzQ5cslK-T9SwspYy4NiKIIcb3Z6CzK4BmGutQBCYuAaujtskbq_KBTvnDwEdVSyG2l12JmqpHOPrOJV7V2DaGi2Ub-Mzw1hs0oeichlu3tyy4VQVsaCjOw4"/>
+</div>
+<div class="w-8 h-8 rounded-full border-2 border-surface-container bg-slate-200 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="portrait of a young man with glasses smiling in a bright outdoor setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAKY6Kqr7HYO216OLo8cOVKXXShwENynGRjNuFtmFWl2pVJY1EdaIHR7l93tWvSyOPOeExiUjtfogLCkAq4ojRzPsuySQqq51KKsNMDuWLtTDXRUCNFsYLCXWd0Z62jbvRvdgg2SOgirIefeySVcwSIevr7MJaSTV4SMy8qoN55D-cpzCNJXw-x52UbL7384fWnm5MztnTTt9swrKk6Wnff2ArrRNuCNS9oa6Hc4yN29r3EftM5Y3c2rU58jPFojKhGnWYWKIrkh0Y"/>
+</div>
+<div class="w-8 h-8 rounded-full border-2 border-surface-container bg-primary-container flex items-center justify-center text-[10px] text-on-primary-container font-bold">+42</div>
+</div>
+</div>
+<!-- Eco-Progress Bar -->
+<div class="w-full bg-primary-fixed h-3 rounded-full overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 75%"></div>
+</div>
+<div class="flex justify-between text-[10px] font-bold uppercase tracking-widest text-on-surface-variant/60">
+<span>0 joined</span>
+<span>60 Target</span>
+</div>
+</div>
+<!-- Signup Form -->
+<section class="space-y-6">
+<div class="space-y-4">
+<div class="space-y-1.5">
+<label class="text-xs font-bold uppercase tracking-widest text-on-surface-variant px-1">Your Name</label>
+<input class="w-full bg-surface-container-highest border-none rounded-lg h-14 px-4 font-medium focus:ring-2 focus:ring-primary/20 focus:bg-white transition-all outline-none" placeholder="e.g. Elena Smith" type="text"/>
+</div>
+<div class="space-y-1.5">
+<label class="text-xs font-bold uppercase tracking-widest text-on-surface-variant px-1">Stall Number</label>
+<input class="w-full bg-surface-container-highest border-none rounded-lg h-14 px-4 font-medium focus:ring-2 focus:ring-primary/20 focus:bg-white transition-all outline-none" placeholder="e.g. B-12" type="text"/>
+</div>
+</div>
+<button class="w-full h-16 bg-gradient-to-br from-primary to-primary-container text-white font-headline font-bold text-lg rounded-full shadow-lg shadow-primary/20 active:scale-95 transition-transform flex items-center justify-center gap-2">
+                Join Cleaning Day
+                <span class="material-symbols-outlined" data-icon="sparkles">colors_spark</span>
+</button>
+<!-- Secondary Information / Impact Badge -->
+<div class="flex justify-center">
+<div class="inline-flex items-center gap-2 bg-tertiary-fixed px-4 py-2 rounded-full shadow-sm">
+<span class="material-symbols-outlined text-on-tertiary-fixed-variant text-sm" data-icon="eco" style="font-variation-settings: 'FILL' 1;">eco</span>
+<span class="text-xs font-bold text-on-tertiary-fixed-variant">Earn 50 Eco-Points for participating</span>
+</div>
+</div>
+</section>
+<!-- Asymmetric Visual Anchor -->
+<div class="pt-4 pb-12">
+<div class="h-48 w-full rounded-xl overflow-hidden relative">
+<img class="w-full h-full object-cover" data-alt="vibrant community marketplace with green plants, sun streaming through rafters, and people collaborating on a sustainability project" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD4SJB9M4umuDTttIakhxVQk8H_GGPq6EwcCf7tHvBiuBOgb4g-kdpMmi0KFZWpUbuM1AVnmnElHGBfCIJ9xdG5yQR3HjrxY7aO0ZJpcVapax-6kxg61K4bXUV56phlbj2IZyBRqHkv5f_-vMGCirFerCYc8fVjKLugY9BrlQ1RwsfG5_jHlbfyJosKRjiCiubIrGi94o_V0sN0pKWmTpeo6QZxsfhZNA8DI6PoqNaKZL9QnipmBrneZWDNLNaHkx3smDobunPwlxM"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
+</div>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full h-20 bg-white/70 backdrop-blur-md flex justify-around items-center px-4 pb-4 rounded-t-xl z-50 shadow-[0px_-10px_40px_rgba(19,27,46,0.05)]">
+<a class="flex flex-col items-center justify-center text-slate-500 px-5 py-2 hover:text-green-600 transition-colors active:scale-90 duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="font-inter text-[10px] font-semibold uppercase tracking-widest mt-1">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 px-5 py-2 hover:text-green-600 transition-colors active:scale-90 duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="add_circle">add_circle</span>
+<span class="font-inter text-[10px] font-semibold uppercase tracking-widest mt-1">Sell</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 px-5 py-2 hover:text-green-600 transition-colors active:scale-90 duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="delete_sweep">delete_sweep</span>
+<span class="font-inter text-[10px] font-semibold uppercase tracking-widest mt-1">Guide</span>
+</a>
+<!-- ACTIVE TAB: Cleaning -->
+<a class="flex flex-col items-center justify-center bg-green-100 text-green-800 rounded-full px-5 py-2 active:scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined" data-icon="cleaning_services" style="font-variation-settings: 'FILL' 1;">cleaning_services</span>
+<span class="font-inter text-[10px] font-semibold uppercase tracking-widest mt-1">Cleaning</span>
+</a>
+</nav>
+</body></html>
