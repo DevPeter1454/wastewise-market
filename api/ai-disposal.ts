@@ -21,7 +21,12 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       messages: [
         {
           role: "user",
-          content: `You are a waste disposal expert for Lagos, Nigeria. A user wants to know how to dispose of: "${wasteType}". Classify this waste and provide detailed disposal instructions relevant to Lagos. Return ONLY valid JSON with no other text: {"category": "<Organic Waste|Plastic|Metal|E-Waste|Paper|Glass|Hazardous|General Waste>", "disposalMethod": "<short method name>", "compostabilityScore": <0-100>, "co2Offset": <number in kg>, "instructions": "<2-3 sentences of disposal guidance>", "marketValue": "<estimated value per kg in Naira or 'No market value'>"}`,
+          content: `You are a waste disposal expert helping market women, traders, and everyday Nigerians manage waste properly. A user at a Nigerian market wants to know how to dispose of: "${wasteType}".
+
+Write instructions in simple, friendly Nigerian English (mix of standard English and Pidgin). Be specific and practical — mention real Nigerian recycling companies (Wecyclers, RecyclePoints, Pakam, Chanja Datti), local terms (Mai-Bola for scrap collectors, LAWMA for Lagos waste), and actual Naira prices. Tell them exactly what to do step by step, like you're explaining to a market woman at Balogun or Mile 12 market.
+
+Return ONLY valid JSON with no other text:
+{"category": "<Organic Waste|Plastic|Metal|E-Waste|Paper|Glass|Hazardous|General Waste>", "disposalMethod": "<short actionable method like 'Sell to Recyclers' or 'Compost / Animal Feed'>", "compostabilityScore": <0-100>, "co2Offset": <number in kg>, "instructions": "<3-4 sentences of practical disposal guidance in Nigerian English>", "marketValue": "<estimated value in Naira per kg, or what they can get for it>"}`,
         },
       ],
     });
@@ -34,11 +39,11 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     console.error("AI disposal error:", error);
     return res.status(200).json({
       category: "General Waste",
-      disposalMethod: "Proper Disposal",
-      compostabilityScore: 20,
+      disposalMethod: "Sort & Dispose Properly",
+      compostabilityScore: 30,
       co2Offset: 0.2,
-      instructions: `For "${wasteType}": Please separate from other waste types and take to your nearest waste collection center. Contact your local waste management authority for specific disposal guidance.`,
-      marketValue: "Contact recycler for pricing",
+      instructions: `For "${wasteType}": First separate am from other waste — food waste for one side, plastics for another, metals for another. No burn anything o! Carry organic waste go compost or give to farmers. Plastics and metals, sell to Mai-Bola or recycling collectors for your market. If you no sure, carry am to LAWMA collection point (Lagos) or your nearest waste center.`,
+      marketValue: "Check with local recyclers",
     });
   }
 }
