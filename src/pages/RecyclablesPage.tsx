@@ -22,7 +22,7 @@ const SAMPLE_RECYCLABLES: Recyclable[] = [
     id: "r1",
     title: "Crushed PET Bottles",
     seller: "Mai-Bola Recycling Hub",
-    location: "Mushin, Lagos",
+    location: "Dugbe, Ibadan",
     material: "Plastic",
     pricePerKg: 350,
     minOrder: "50 kg",
@@ -34,7 +34,7 @@ const SAMPLE_RECYCLABLES: Recyclable[] = [
     id: "r2",
     title: "Sorted Aluminium Cans",
     seller: "Iya Basira Scrap Yard",
-    location: "Ojota, Lagos",
+    location: "Ojota, Ibadan",
     material: "Metal",
     pricePerKg: 800,
     minOrder: "20 kg",
@@ -45,8 +45,8 @@ const SAMPLE_RECYCLABLES: Recyclable[] = [
   {
     id: "r3",
     title: "Clean Glass Bottles",
-    seller: "GreenCycle Yaba",
-    location: "Yaba, Lagos",
+    seller: "GreenCycle Bodija",
+    location: "Bodija, Ibadan",
     material: "Glass",
     pricePerKg: 120,
     minOrder: "100 kg",
@@ -58,7 +58,7 @@ const SAMPLE_RECYCLABLES: Recyclable[] = [
     id: "r4",
     title: "Compost Manure (Ready)",
     seller: "Baba Agric Composting",
-    location: "Agege, Lagos",
+    location: "Agodi, Ibadan",
     material: "Organic",
     pricePerKg: 200,
     minOrder: "25 kg",
@@ -69,8 +69,8 @@ const SAMPLE_RECYCLABLES: Recyclable[] = [
   {
     id: "r5",
     title: "Shredded Pure Water Sachets",
-    seller: "Wecyclers Lagos",
-    location: "Surulere, Lagos",
+    seller: "Wecyclers Oyo State",
+    location: "Mokola, Ibadan",
     material: "Plastic",
     pricePerKg: 250,
     minOrder: "30 kg",
@@ -82,7 +82,7 @@ const SAMPLE_RECYCLABLES: Recyclable[] = [
     id: "r6",
     title: "Cardboard Bales",
     seller: "Pakam Collectors",
-    location: "Ikeja, Lagos",
+    location: "Ogbomoso, Oyo State",
     material: "Paper",
     pricePerKg: 180,
     minOrder: "100 kg",
@@ -93,8 +93,8 @@ const SAMPLE_RECYCLABLES: Recyclable[] = [
   {
     id: "r7",
     title: "Scrap Iron & Steel",
-    seller: "Owode Metal Market",
-    location: "Owode Onirin, Lagos",
+    seller: "Owode Metal Market Oyo",
+    location: "Oyo Town, Oyo State",
     material: "Metal",
     pricePerKg: 450,
     minOrder: "50 kg",
@@ -106,7 +106,7 @@ const SAMPLE_RECYCLABLES: Recyclable[] = [
     id: "r8",
     title: "Palm Kernel Shell",
     seller: "Mama Eco Farms",
-    location: "Epe, Lagos",
+    location: "Iseyin, Oyo State",
     material: "Organic",
     pricePerKg: 150,
     minOrder: "200 kg",
@@ -166,7 +166,7 @@ export default function RecyclablesPage() {
             Buy Recyclables
           </h1>
           <p className="text-on-surface-variant mt-1 max-w-xl">
-            Buy sorted, cleaned recyclable materials from verified Lagos
+            Buy sorted, cleaned recyclable materials from verified Oyo State
             collectors. Turn waste into raw materials for your business.
           </p>
         </div>
@@ -212,7 +212,7 @@ export default function RecyclablesPage() {
             {totalCO2.toFixed(1)} kg CO₂ saved per kg bought
           </p>
           <p className="text-xs text-on-surface-variant mt-0.5">
-            Every purchase reduces landfill waste across Lagos markets
+            Every purchase reduces landfill waste across Oyo State markets
           </p>
         </div>
       </div>

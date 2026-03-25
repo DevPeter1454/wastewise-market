@@ -42,8 +42,8 @@ const SAMPLE_LISTINGS: Listing[] = [
   },
   {
     id: "3",
-    title: "Abuja Yam Tubers (5pcs)",
-    vendorName: "Green Earth Collective",
+    title: "Oyo State Yam Tubers (5pcs)",
+    vendorName: "Oyo Farmer's Collective",
     imageUrl:
       "https://lh3.googleusercontent.com/aida-public/AB6AXuArp4aAOlWYsd8LQX14XG125A1JVcufHsvsN3D5ONvb3UqzwHaHANjpzw-e6uYl1a3h4naBbd7ELF26Kk734cwNHVjF6T2iKPJEyXErfG51Z2XaRdO7UrLnuNGMh_Z8uySt5U9ELZe5wk63DJzehMPKjRl6QzYFqxXJgnnEShVwm9ECZH4S0HG-LvLlO_WUN3hzVhVLrfRrwj0P9_1yeLmQIyDXk55f0Z_5z4Bi3UsWeG66EXFHFUfarD_86-5UTGBPFBLEZMy6C7U",
     category: "Vegetables",
@@ -58,7 +58,7 @@ const SAMPLE_LISTINGS: Listing[] = [
   {
     id: "4",
     title: "Red Onions (Half Bag)",
-    vendorName: "Zaria Market Hub",
+    vendorName: "Oja Oba Market Hub",
     imageUrl:
       "https://lh3.googleusercontent.com/aida-public/AB6AXuBU9R4S0QEHimY0Sh36ycQ8Na2FkhLFfXesnQ5_uZC5av4zruzzFfVQQ6tJX6YhcmRpdmhBcrKzBkwNgV5xVyp4qW7AfuP7WEGIvwmzaCaeJ5tHbcReyLFd5ShGcWk2cbabDhKr-Mgwn0o_866YxVmnvjIsTMZosycXEA3Xh9rWOGltxX06tJdUfMxEq6kd3eLeXIAg6KwoCE2D623DOIppyiGdZzltY5s9i47LcNwE5P8-EKRdUDIcvEaEVSoWPh8t7CTvRS-2du0",
     category: "Vegetables",

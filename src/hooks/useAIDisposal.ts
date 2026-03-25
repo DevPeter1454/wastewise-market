@@ -20,7 +20,7 @@ const COMMON_WASTE: Record<string, AIDisposalResult> = {
     compostabilityScore: 0,
     co2Offset: 0.8,
     instructions:
-      "Gather all your nylon — black, white, cellophane, everything. Shake out any food or dirt, then pack inside one big bag. No burn am o! The smoke dey cause cancer. Carry am go the recycling people for market — some dey pay ₦30-₦50 per kilo. For Lagos, call Wecyclers. For Abuja, try Chanja Datti.",
+      "Gather all your nylon — black, white, cellophane, everything. Shake out any food or dirt, then pack inside one big bag. No burn am o! The smoke dey cause cancer. Carry am go the recycling people for market — some dey pay ₦30-₦50 per kilo. For Ibadan, call Wecyclers Oyo State. You fit also contact OYOWMA (Oyo State Waste Management Authority) for collection.",
     marketValue: "₦30–₦50/kg",
   },
   "pure water sachet": {
@@ -47,7 +47,7 @@ const COMMON_WASTE: Record<string, AIDisposalResult> = {
     compostabilityScore: 0,
     co2Offset: 1.2,
     instructions:
-      "Plastic bottles (Coke, Fanta, water) get high value for recycling. Press am flat, remove the cap (na different plastic). When you get 20-50 kg, call recycling company. For Lagos try RecyclePoints or Wecyclers, for Abuja try Chanja Datti. Them go pay you cash or give you points.",
+      "Plastic bottles (Coke, Fanta, water) get high value for recycling. Press am flat, remove the cap (na different plastic). When you get 20-50 kg, call recycling company. For Ibadan try RecyclePoints Oyo or Wecyclers Oyo State. Them go pay you cash or give you points.",
     marketValue: "₦100–₦150/kg",
   },
   "food waste": {
@@ -92,7 +92,7 @@ const COMMON_WASTE: Record<string, AIDisposalResult> = {
     compostabilityScore: 0,
     co2Offset: 0.3,
     instructions:
-      "Styrofoam (takeaway containers) na wahala — e no dey decompose at all. No burn am! The fumes dey very dangerous. For Lagos, RecyclePoints dey collect am. If nobody dey collect for your area, pack am dry inside bag, carry to the nearest waste collection point. Better still, try carry your own container when buying food.",
+      "Styrofoam (takeaway containers) na wahala — e no dey decompose at all. No burn am! The fumes dey very dangerous. For Ibadan, RecyclePoints Oyo dey collect am. If nobody dey collect for your area, pack am dry inside bag, carry to the nearest OYOWMA waste collection point. Better still, try carry your own container when buying food.",
     marketValue: "₦10–₦20/kg (limited demand)",
   },
   "palm oil waste": {
@@ -101,7 +101,7 @@ const COMMON_WASTE: Record<string, AIDisposalResult> = {
     compostabilityScore: 70,
     co2Offset: 0.5,
     instructions:
-      "Palm kernel shells fit use as fuel instead of firewood. The soft part fit go for compost. If you dey Mile 12 or Oyingbo area, palm oil processors dey always look for people to take the waste. Some biofuel companies dey even pay for palm kernel shells in bulk.",
+      "Palm kernel shells fit use as fuel instead of firewood. The soft part fit go for compost. If you dey Ring Road or Bodija Market area, palm oil processors dey always look for people to take the waste. Some biofuel companies dey even pay for palm kernel shells in bulk.",
     marketValue: "₦20–₦40/kg (shells for fuel)",
   },
   "glass bottles": {
@@ -291,7 +291,7 @@ export function useAIDisposal() {
         disposalMethod: "Sort & Dispose Properly",
         compostabilityScore: 30,
         co2Offset: 0.2,
-        instructions: `For "${wasteType}": First, separate am from other waste — put organic (food) waste for one side, plastics for another, and metals for another. No burn anything o! For organic waste, compost am or give to farmers. For plastics and metal, sell to the Mai-Bola or recycling collectors wey dey your market. If you no sure, carry am to the nearest LAWMA (Lagos) or waste collection center.`,
+        instructions: `For "${wasteType}": First, separate am from other waste — put organic (food) waste for one side, plastics for another, and metals for another. No burn anything o! For organic waste, compost am or give to farmers. For plastics and metal, sell to the Mai-Bola or recycling collectors wey dey your market. If you no sure, carry am to the nearest OYOWMA (Oyo State Waste Management Authority) collection center for Ibadan.`,
         marketValue: "Check with local recyclers",
       });
       setError(null);

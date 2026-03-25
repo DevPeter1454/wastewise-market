@@ -11,15 +11,15 @@ const DROP_OFF_CENTERS = [
     status: "Open",
     statusColor: "text-primary",
     distance: "2.4 miles away",
-    area: "Mushin, Lagos",
+    area: "Dugbe, Ibadan",
     types: ["Plastic", "Organic"],
   },
   {
-    name: "Eco-Cycle Yaba",
+    name: "Eco-Cycle Bodija",
     status: "Closing soon",
     statusColor: "text-error",
     distance: "3.8 miles away",
-    area: "Yaba, Lagos",
+    area: "Bodija, Ibadan",
     types: ["Metal", "E-Waste"],
   },
 ];
@@ -99,7 +99,7 @@ export default function DisposalGuidePage() {
             </div>
             <div className="flex flex-wrap gap-2 items-center">
               <span className="text-xs font-semibold text-slate-400 uppercase tracking-wider">
-                Common in Lagos:
+                Common in Oyo State:
               </span>
               {QUICK_TAGS.map((tag) => (
                 <button

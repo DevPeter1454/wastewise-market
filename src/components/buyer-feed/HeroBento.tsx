@@ -12,7 +12,7 @@ export default function HeroBento() {
           </div>
           <h3 className="text-5xl font-black mb-2">240 Kilograms</h3>
           <p className="text-primary-fixed font-medium text-lg">
-            Waste Saved Today in Lagos Region
+            Waste Saved Today in Oyo State Region
           </p>
         </div>
         <div className="mt-8 relative z-10 flex items-center gap-4">
@@ -31,10 +31,10 @@ export default function HeroBento() {
       <div className="bg-tertiary-fixed p-8 rounded-xl flex flex-col justify-between shadow-sm group">
         <div>
           <h4 className="text-on-tertiary-fixed text-2xl font-bold mb-2">
-            Direct From Plateau
+            Direct From Oyo State
           </h4>
           <p className="text-on-tertiary-fixed-variant text-sm">
-            The freshest Irish Potatoes and Bell Peppers just arrived at 40%
+            The freshest Yams and Cocoa Beans just arrived at 40%
             discount.
           </p>
         </div>
