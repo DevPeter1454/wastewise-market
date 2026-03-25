@@ -13,7 +13,7 @@ import Icon from "../components/shared/Icon";
 import Toast from "../components/shared/Toast";
 import type { Listing } from "../types";
 
-const CATEGORIES = ["Vegetables", "Fruits", "Grains", "Dairy"];
+const CATEGORIES = ["Vegetables", "Tubers", "Fruits", "Grains", "Legumes", "Spices", "Herbs", "Dairy"];
 
 export default function SettingsPage() {
   const [listings, setListings] = useState<Listing[]>([]);

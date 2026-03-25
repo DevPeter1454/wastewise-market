@@ -5,7 +5,7 @@ export interface Listing {
   title: string;
   vendorName: string;
   imageUrl: string;
-  category: "Vegetables" | "Fruits" | "Grains" | "Dairy";
+  category: "Vegetables" | "Fruits" | "Grains" | "Dairy" | "Tubers" | "Legumes" | "Spices" | "Herbs";
   quantity: string;
   originalPrice: number;
   discountPrice: number;

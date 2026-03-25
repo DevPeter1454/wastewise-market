@@ -7,7 +7,7 @@ import FabSellItem from "../components/buyer-feed/FabSellItem";
 import { useListings } from "../hooks/useListings";
 import type { Listing } from "../types";
 
-const CATEGORIES = ["All", "Vegetables", "Fruits", "Grains", "Dairy"];
+const CATEGORIES = ["All", "Vegetables", "Tubers", "Fruits", "Grains", "Legumes", "Spices", "Herbs", "Dairy"];
 
 export default function BuyerFeedPage() {
   const [activeCategory, setActiveCategory] = useState("All");

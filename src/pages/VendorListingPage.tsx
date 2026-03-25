@@ -7,7 +7,7 @@ import Icon from "../components/shared/Icon";
 import Toast from "../components/shared/Toast";
 import { useAIPricing } from "../hooks/useAIPricing";
 
-const CATEGORIES = ["Vegetables", "Fruits", "Grains", "Dairy"];
+const CATEGORIES = ["Vegetables", "Tubers", "Fruits", "Grains", "Legumes", "Spices", "Herbs", "Dairy"];
 
 export default function VendorListingPage() {
   const navigate = useNavigate();
